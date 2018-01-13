@@ -52,11 +52,24 @@ int main()
         }
         break;
     }
-        default:
-            printf("ne pravilna");
+default:
+            printf("ne pravilna\n");
         {
+            cels = (floa *9/5) + 32;
+            kelv = ((floa - 32)*5)/9 + 273.15;
+            printf(" if vvod - fahr \n fahr - cel = %.2f\t fahr - kelv = %.2f\n",cels , kelv);
+            cels = 0;
+            kelv = 0;
+            kelv = floa + 273.15;
+            fahr = (floa *9/5) + 32;
+            printf("if vvod - cels\n cels - fahr = %.2f\t cels - kelv = %.2f\n", fahr, kelv );
+            cels = 0;
+            kelv = 0;
+            fahr = 0;
+            cels = floa - 273;
+            fahr = (floa - 273.15)*1.8 + 32;
+            printf("vvod - kelv\n kelv - cels = %.2f\t kelv - fahr = %.2f\t", cels, fahr);
             break;
-
         }
     }
  }
