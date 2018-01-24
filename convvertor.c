@@ -5,7 +5,7 @@ int main()
  {
     char par;
     float floa;
-    printf("Enter temp: ^_^ ");
+    printf("Enter temp: ");
     scanf("%f %c",&floa,&par);
 
     switch (par)
@@ -14,7 +14,7 @@ int main()
     {
         printf("CONVETRING CEL - far - kelv\t");
         if (floa < -273.15)
-        printf("nizje nulia");
+        printf("Lower 0");
         else
        {
         floa = (floa *9/5) + 32;
@@ -28,7 +28,7 @@ int main()
     {
        printf ("CONVERTING FAR-CEL-KELV\n ");
         if (floa < -459.4)
-            printf("nizje absolutly null");
+            printf("Lower 0");
         else
         {
        floa = ((floa - 32)*5)/9;
@@ -42,7 +42,7 @@ int main()
     {
         printf("CONVERTING KEL-CEL-FAHR\n");
         if (floa < 0)
-            printf("slishkom nizko temp");
+            printf("Lower 0");
         else
             {
         floa = floa - 273.15;
@@ -53,22 +53,22 @@ int main()
         break;
     }
 default:
-            printf("ne pravilna\n");
+            printf("Error\n");
         {
             cels = (floa *9/5) + 32;
             kelv = ((floa - 32)*5)/9 + 273.15;
-            printf(" if vvod - fahr \n fahr - cel = %.2f\t fahr - kelv = %.2f\n",cels , kelv);
+            printf(" if Enter - fahr \n fahr - cel = %.2f\t fahr - kelv = %.2f\n",cels , kelv);
             cels = 0;
             kelv = 0;
             kelv = floa + 273.15;
             fahr = (floa *9/5) + 32;
-            printf("if vvod - cels\n cels - fahr = %.2f\t cels - kelv = %.2f\n", fahr, kelv );
+            printf("if Enter - cels\n cels - fahr = %.2f\t cels - kelv = %.2f\n", fahr, kelv );
             cels = 0;
             kelv = 0;
             fahr = 0;
             cels = floa - 273;
             fahr = (floa - 273.15)*1.8 + 32;
-            printf("vvod - kelv\n kelv - cels = %.2f\t kelv - fahr = %.2f\t", cels, fahr);
+            printf("if Enter - kelv\n kelv - cels = %.2f\t kelv - fahr = %.2f\t", cels, fahr);
             break;
         }
     }
